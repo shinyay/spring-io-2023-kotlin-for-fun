@@ -9,6 +9,6 @@ class Book(var name: String?, var author: String?) {
     @Id
     @GeneratedValue
     var id: Long? = null
-    
+
     constructor() : this("", "")
 }
