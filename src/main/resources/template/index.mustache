@@ -16,18 +16,18 @@
 {{/search}}
 
 <ul>
-    {{#videos}}
+    {{#books}}
         <li>
             {{name}}
-            <form action="/delete/videos/{{id}}" method="post">
+            <form action="/book/delete/{{id}}" method="post">
                 <button type="submit">Delete</button>
             </form>
         </li>
-    {{/videos}}
+    {{/books}}
 
-    <form action="/new-video" method="post">
+    <form action="/book/register" method="post">
         <input type="text" name="name">
-        <input type="text" name="description">
+        <input type="text" name="author">
         <button type="submit">Submit</button>
     </form>
 </ul>
