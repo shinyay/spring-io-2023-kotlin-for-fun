@@ -29,5 +29,5 @@ class BookService(val repository: BookRepository) {
         )
     }
 
-    fun getBooks() = repository.findAll()
+    fun getBooks(): MutableList<Book> = repository.findAll()
 }
