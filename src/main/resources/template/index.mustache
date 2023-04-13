@@ -1,0 +1,33 @@
+<h1>Spring Demo Apps by Kotlin</h1>
+<p>
+    This is a simple sample application made in Kotlin for fun.
+</p>
+
+<hr>
+
+<form action="/search" method="post">
+    <label for="value">Search:</label>
+    <input type="text" name="value">
+    <button type="submit">Search</button>
+</form>
+
+{{#search}}
+    Searching: {{value}}
+{{/search}}
+
+<ul>
+    {{#videos}}
+        <li>
+            {{name}}
+            <form action="/delete/videos/{{id}}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {{/videos}}
+
+    <form action="/new-video" method="post">
+        <input type="text" name="name">
+        <input type="text" name="description">
+        <button type="submit">Submit</button>
+    </form>
+</ul>
