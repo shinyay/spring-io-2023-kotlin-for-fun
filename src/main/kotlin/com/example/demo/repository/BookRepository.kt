@@ -12,4 +12,8 @@ interface BookRepository : JpaRepository<Book, Long> {
     fun findByNameContainsIgnoreCase(
         name: String
     ): MutableList<Book>
+
+    fun findByAuthorContainsIgnoreCase(
+        author: String
+    ): MutableList<Book>
 }
