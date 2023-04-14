@@ -18,7 +18,7 @@
 <ul>
     {{#books}}
         <li>
-            {{name}}
+            {{name}} / {{author}}
             <form action="/book/delete/{{id}}" method="post">
                 <button type="submit">Delete</button>
             </form>
