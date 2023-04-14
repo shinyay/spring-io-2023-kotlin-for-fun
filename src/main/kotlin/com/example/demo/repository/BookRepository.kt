@@ -8,4 +8,8 @@ interface BookRepository : JpaRepository<Book, Long> {
         name: String,
         author: String
     ): MutableList<Book>
+
+    fun findByNameContainsIgnoreCase(
+        name: String
+    ): MutableList<Book>
 }
