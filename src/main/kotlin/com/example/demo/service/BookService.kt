@@ -1,5 +1,6 @@
 package com.example.demo.service
 
+import com.example.demo.dto.NewBook
 import com.example.demo.dto.SearchBook
 import com.example.demo.entity.Book
 import com.example.demo.repository.BookRepository
@@ -65,4 +66,6 @@ class BookService(val repository: BookRepository) {
                 )
             }
     }
+
+    fun register(newBook: NewBook) = repository.saveAndFlush(Book(newBook.name, newBook.author))
 }
