@@ -40,6 +40,13 @@ class BookService(val repository: BookRepository) {
                 searchBook.name, searchBook.author
             )
         }
+
+        if (StringUtils.hasText(searchBook.name)) {
+            return repository.findByNameContainsIgnoreCase(
+                searchBook.name
+            )
+        }
+
         return Collections.emptyList()
     }
 }
