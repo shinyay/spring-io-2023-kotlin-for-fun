@@ -1,9 +1,12 @@
 package com.example.demo.service
 
+import com.example.demo.dto.SearchBook
 import com.example.demo.entity.Book
 import com.example.demo.repository.BookRepository
 import jakarta.annotation.PostConstruct
 import org.springframework.stereotype.Service
+import org.springframework.util.StringUtils
+import java.util.*
 
 @Service
 class BookService(val repository: BookRepository) {
@@ -30,4 +33,13 @@ class BookService(val repository: BookRepository) {
     }
 
     fun getBooks(): MutableList<Book> = repository.findAll()
+
+    fun search(searchBook: SearchBook): MutableList<Book> {
+        if (StringUtils.hasText(searchBook.name) && StringUtils.hasText(searchBook.author)) {
+            return repository.findByNameContainsOrAuthorContainsAllIgnoreCase(
+                searchBook.name, searchBook.author
+            )
+        }
+        return Collections.emptyList()
+    }
 }
