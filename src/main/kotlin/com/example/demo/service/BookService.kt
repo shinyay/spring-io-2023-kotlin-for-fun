@@ -2,14 +2,12 @@ package com.example.demo.service
 
 import com.example.demo.dto.SearchBook
 import com.example.demo.entity.Book
-import com.example.demo.logger
 import com.example.demo.repository.BookRepository
 import jakarta.annotation.PostConstruct
 import org.springframework.data.domain.Example
 import org.springframework.data.domain.ExampleMatcher
 import org.springframework.stereotype.Service
 import org.springframework.util.StringUtils
-import java.util.*
 
 @Service
 class BookService(val repository: BookRepository) {
