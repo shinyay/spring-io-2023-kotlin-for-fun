@@ -51,4 +51,18 @@ class BookService(val repository: BookRepository) {
         )
         return repository.findAll(example)
     }
+
+    fun delete(id: Long) {
+        repository.findById(id)
+            .map {
+                book: Book ->
+                repository.delete(book)
+                true
+            }
+            .orElseThrow {
+                RuntimeException(
+                    "No book at $id"
+                )
+            }
+    }
 }
