@@ -52,24 +52,5 @@ class BookService(val repository: BookRepository) {
                 .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
         )
         return repository.findAll(example)
-//        if (StringUtils.hasText(searchBook.name) && StringUtils.hasText(searchBook.author)) {
-//            return repository.findByNameContainsOrAuthorContainsIgnoreCase(
-//                searchBook.name, searchBook.author
-//            )
-//        }
-//
-//        if (StringUtils.hasText(searchBook.name)) {
-//            return repository.findByNameContainsIgnoreCase(
-//                searchBook.name
-//            )
-//        }
-//
-//        if (StringUtils.hasText(searchBook.author)) {
-//            return repository.findByAuthorContainsIgnoreCase(
-//                searchBook.author
-//            )
-//        }
-//
-//        return Collections.emptyList()
     }
 }
