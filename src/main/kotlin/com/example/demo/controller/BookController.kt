@@ -18,7 +18,7 @@ class BookController(val service: BookService) {
         return "index"
     }
 
-    @PostMapping
+    @PostMapping("/search")
     fun search(@ModelAttribute searchBook: SearchBook, model: Model): String {
         val searchResult = service.search(searchBook)
         model.addAttribute("books", searchResult)
