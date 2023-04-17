@@ -40,8 +40,10 @@ class BookService(val repository: BookRepository) {
         val probe = Book()
 
         if (StringUtils.hasText(searchBook.value)) {
-            probe.name = searchBook.value
-            probe.author = searchBook.value
+            probe.apply {
+                name = searchBook.value
+                author = searchBook.value
+            }
         }
 
         val example: Example<Book> = Example.of(
