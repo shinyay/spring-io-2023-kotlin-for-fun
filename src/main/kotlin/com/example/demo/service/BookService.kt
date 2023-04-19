@@ -70,4 +70,8 @@ class BookService(val repository: BookRepository) {
     }
 
     fun register(newBook: NewBook) = repository.saveAndFlush(Book(newBook.name, newBook.author))
+
+    fun update(): Book {
+        TODO("")
+    }
 }
