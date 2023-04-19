@@ -72,6 +72,6 @@ class BookService(val repository: BookRepository) {
     fun register(newBook: NewBook) = repository.saveAndFlush(Book(newBook.name, newBook.author))
 
     fun update(): Book {
-        TODO("")
+        TODO("Need to implement a process to update")
     }
 }
