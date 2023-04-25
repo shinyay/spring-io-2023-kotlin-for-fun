@@ -2,6 +2,7 @@ package com.example.demo.controller
 
 import com.example.demo.dto.NewBook
 import com.example.demo.dto.SearchBook
+import com.example.demo.logger
 import com.example.demo.service.BookService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -35,6 +36,8 @@ class BookController(val service: BookService) {
 
     @PostMapping("/book/register")
     fun register(@ModelAttribute book: NewBook): String {
+        logger.info("Author: ${book.author}")
+        logger.info("Name: ${book.name}")
         service.register(book)
         return "redirect:/"
     }
