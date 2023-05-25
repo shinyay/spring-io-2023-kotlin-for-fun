@@ -1,12 +1,29 @@
-# Sample Code on my talk "Kotlin for Fun" on Spring IO 2023
+# Sample Code on "Kotlin for Fun" on Spring IO 2023
 
 <img width="1672" alt="image" src="https://github.com/shinyay/spring-io-2023-kotlin-for-fun/assets/3072734/1c6c44a3-ec31-4b36-af34-94dc817ee49d">
 
-Overview
+<https://2023.springio.net/sessions/kotlin-for-fun-for-spring-fans/>
+
+Kotlin code cited in my session "Kotlin for Fun, for Spring Fans" at Spring IO 2023 on May 19, 2023
 
 ## Description
 
+A simple HTTP application.
+Data operation is performed via REST using Spring Data JPA.
+
 ## Demo
+
+Run App:
+
+```shell
+$ ./gradlew clean bootRun
+```
+
+End point access:
+
+```shell
+$ curl -X GET localhost:8080/api/v1/books
+```
 
 ## Features
 
@@ -15,11 +32,13 @@ Overview
 
 ## Requirement
 
-## Usage
-
-## Installation
+My environment:
+- JDK: 19
+- OS: MacOS
 
 ## References
+
+- [YouTube Link (Not uploaded yet)]()
 
 ## Licence
 
