@@ -1,4 +1,6 @@
-# Name
+# Sample Code on my talk "Kotlin for Fun" on Spring IO 2023
+
+<img width="1672" alt="image" src="https://github.com/shinyay/spring-io-2023-kotlin-for-fun/assets/3072734/1c6c44a3-ec31-4b36-af34-94dc817ee49d">
 
 Overview
 
