@@ -33,6 +33,7 @@ My environment:
 
 ## References
 
+- [Sesslin Slide](./pdf/230519_SpringIO_Kotlin_for_Fun_for_Spring_Fans_PDF.pdf)
 - [YouTube Link (Not uploaded yet)]()
 
 ## Licence
