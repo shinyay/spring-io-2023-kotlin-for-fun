@@ -25,11 +25,6 @@ End point access:
 $ curl -X GET localhost:8080/api/v1/books
 ```
 
-## Features
-
-- feature:1
-- feature:2
-
 ## Requirement
 
 My environment:
